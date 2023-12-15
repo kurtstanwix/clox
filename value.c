@@ -2,6 +2,8 @@
 // Created by Kurt on 15/12/2023.
 //
 
+#include <stdio.h>
+
 #include "value.h"
 #include "memory.h"
 
@@ -11,7 +13,7 @@ void initValueArray(ValueArray* array) {
     array->values = NULL;
 }
 
-void freeValue(ValueArray* array) {
+void freeValueArray(ValueArray* array) {
     FREE_ARRAY(Value, array->values, array->capacity);
     initValueArray(array);
 }
@@ -24,4 +26,8 @@ void writeValueArray(ValueArray* array, Value byte) {
     }
     array->values[array->count] = byte;
     array->count++;
+}
+
+void printValue(Value value) {
+    printf("%g", value);
 }
