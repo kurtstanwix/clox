@@ -14,4 +14,12 @@ add_executable(CLox main.c
         value.h
         value.c
         vm.c
-        vm.h)
+        vm.h
+        compiler.c
+        compiler.h
+        scanner.c
+        scanner.h
+        object.c
+        object.h)
+
+configure_file(testLox.txt testLox.txt COPYONLY)
